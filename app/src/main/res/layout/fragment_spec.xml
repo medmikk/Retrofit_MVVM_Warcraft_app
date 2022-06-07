@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".ui.fragments.SpecFragment">
+
+
+    <TextView
+        android:id="@+id/nameSpecTV"
+        style="@style/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Enchantement Shaman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentSpecTV"
+        style="@style/SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="100%"
+        app:layout_constraintBaseline_toBaselineOf="@+id/DPSSpecTV"
+        app:layout_constraintStart_toEndOf="@+id/DPSSpecTV" />
+
+    <TextView
+        android:id="@+id/DPSSpecTV"
+        style="@style/MainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18.900  DPS"
+        app:layout_constraintStart_toStartOf="@+id/nameSpecTV"
+        app:layout_constraintTop_toBottomOf="@+id/nameSpecTV" />
+
+    <TextView
+        android:id="@+id/subheaderRanking"
+        style="@style/SecondaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="World of Warcraft Shadowlands Patch 9.2"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentSpecTV" />
+
+    <TextView
+        android:id="@+id/FromSpecToGuideTV"
+        style="@style/LinkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Check guide"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/FromSpecToRankingTV"
+        style="@style/LinkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DPS Rankings"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/FromSpecToGuideTV" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/dark_grey"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subheaderRanking">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/SecondaryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="The total damage each ability averaged during sims.\nNote: SimC does not propertly log all abilities despite being used, some may be missing below" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/specRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/FromSpecToRankingTV"
+        app:layout_constraintStart_toStartOf="@+id/FromSpecToGuideTV"
+        app:layout_constraintTop_toBottomOf="@+id/FromSpecToGuideTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

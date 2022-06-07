@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.medvedev.wowproject.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_guideHomeFragment"
+            app:destination="@id/guideHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rankingFragment"
+            app:destination="@id/rankingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guideHomeFragment"
+        android:name="com.medvedev.wowproject.ui.fragments.GuideHomeFragment"
+        android:label="fragment_guide_home"
+        tools:layout="@layout/fragment_guide_home" >
+        <action
+            android:id="@+id/action_guideHomeFragment_to_guideDetailFragment"
+            app:destination="@id/guideDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rankingFragment"
+        android:name="com.medvedev.wowproject.ui.fragments.RankingFragment"
+        android:label="fragment_ranking"
+        tools:layout="@layout/fragment_ranking" >
+        <action
+            android:id="@+id/action_rankingFragment_to_specFragment"
+            app:destination="@id/specFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guideDetailFragment"
+        android:name="com.medvedev.wowproject.ui.fragments.GuideDetailFragment"
+        android:label="fragment_guide_detail"
+        tools:layout="@layout/fragment_guide_detail" >
+        <argument
+            android:name="guide"
+            app:argType="com.medvedev.wowproject.model.GuideDTO" />
+    </fragment>
+    <fragment
+        android:id="@+id/specFragment"
+        android:name="com.medvedev.wowproject.ui.fragments.SpecFragment"
+        android:label="fragment_spec"
+        tools:layout="@layout/fragment_spec" >
+        <action
+            android:id="@+id/action_specFragment_to_guideDetailFragment"
+            app:destination="@id/guideDetailFragment" />
+        <argument
+            android:name="spec"
+            app:argType="com.medvedev.wowproject.model.SpecDTO" />
+        <action
+            android:id="@+id/action_specFragment_to_rankingFragment"
+            app:destination="@id/rankingFragment" />
+    </fragment>
+</navigation>

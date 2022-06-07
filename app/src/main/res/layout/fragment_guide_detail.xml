@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".ui.fragments.GuideDetailFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/DGIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </ImageView>
+                <ImageView
+                    android:id="@+id/DGIVGrad"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/DGIV"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/GDNameTV"
+                    style="@style/Header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="DeathKnight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DGIV">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDpatch"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="WoW Shadowlands Patch 9.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDNameTV">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDH1"
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Introduction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDpatch">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDindro"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constrainedWidth="true"
+                    android:text="WoW Shadowlands Patch 9.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDH1">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDH2"
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="PVE Stat Priority"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDindro">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDStatPriority"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="WoW Shadowlands Patch 9.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDH2">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/GDH4"
+                    style="@style/MainText"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="Stat Weights"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDStatPriority"></TextView>
+
+                <TextView
+                    android:id="@+id/GDStatWeights"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="WoW Shadowlands Patch 9.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDH4">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDH5"
+                    style="@style/MainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Talent Builds"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDStatWeights">
+                </TextView>
+                <TextView
+                    android:id="@+id/GDTalentBuilds"
+                    style="@style/SecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="WoW Shadowlands Patch 9.2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDH5">
+                </TextView>
+
+                <TableLayout
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/GDTalentBuilds"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView"
+                            style="@style/TableText"
+                            android:text="lvl 15" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView2"
+                            style="@style/TableText"
+                            android:text="lvl 25" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView21213"
+                            style="@style/TableText"
+                            android:text="lvl 30" />
+
+                        <TextView
+                            android:id="@+id/textView30"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/TableText"
+                            android:text="lvl 35" />
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView8"
+                            style="@style/TableText"
+                            android:text="lvl 40" />
+
+                        <TextView
+                            android:id="@+id/textView40"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView5"
+                            style="@style/TableText"
+                            android:text="lvl 45" />
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/TableText"
+                            android:text="lvl 50" />
+
+                        <TextView
+                            android:id="@+id/textView50"
+                            style="@style/TableText"
+                            android:text="TextView" />
+                    </TableRow>
+                </TableLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
