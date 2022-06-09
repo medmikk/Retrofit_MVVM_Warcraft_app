@@ -17,3 +17,4 @@ interface ClientAPI {
 
     ): Response<RankingResponse>
 }
+

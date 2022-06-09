@@ -7,8 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitInstance {
     companion object{
-        const val BASEURL = "http://192.168.0.167:8000/"
-
+        private const val BASE_URL = "http://192.168.0.167:8000/"
 
         private val retrofitInstance by lazy{
             val logging = HttpLoggingInterceptor()
@@ -17,7 +16,7 @@ class RetrofitInstance {
                 .addInterceptor(logging)
                 .build()
             Retrofit.Builder()
-                .baseUrl(BASEURL)
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()
@@ -28,3 +27,4 @@ class RetrofitInstance {
         }
     }
 }
+

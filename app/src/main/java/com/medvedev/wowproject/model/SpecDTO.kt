@@ -12,3 +12,4 @@ data class SpecDTO(
     val spelllist: List<SpellDTO>?,
     val target: Int
 ) : Serializable
+

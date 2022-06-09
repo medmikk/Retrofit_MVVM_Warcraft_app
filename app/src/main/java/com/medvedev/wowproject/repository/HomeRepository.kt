@@ -12,3 +12,4 @@ class HomeRepository {
         RetrofitInstance.retrofit.getRanking()
 
 }
+
